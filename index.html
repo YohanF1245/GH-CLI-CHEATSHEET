@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>GH CLI cheat sheet</title>
+</head>
+<body class="bg-info">
+    <div>
+        <a href="#Install" class="text-decoration-none"></a>
+        <a href="#Login" class="text-decoration-none"></a>
+    </div>
+    <div class="col-6 offset-3 bg-primary p-5 rounded border-dark mt-5 mb-5"><h1 class="text-center text-white">GH CLI CHEAT SHEET</h1></div>
+    <div class="col-8 offset-2 bg-white p-2 rounded border-dark mt-5 mb-5 text-center"><p>GitHub CLI is an open-source command line tool
+        that brings GitHub to your terminal. You can check
+        the status, pull requests, issues, files, gists, and
+        other GitHub concepts.</p></div>
+    <div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white">INSTALLATION</h2></div>
+    <div class="col-8 offset-2 bg-white p-0 rounded border-dark">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>macOS</th>
+                    <th>Linux</th>
+                    <th>Windows</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>$ brew install gh</td>
+                    <td>$ sudo apt install gh</td>
+                    <td>$ winget install --id GitHub.cli</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Login">LOGIN</h2></div>
+    <div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>Launch a browser to authenticate.
+                    </th>
+                    <th>Alternatively, use GitHub token.
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>$ gh auth login
+                    </td>
+                    <td>$ gh auth login --with-token < mytoken.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Browse">BROWSE</h2></div>
+    <div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>View Current GitHub repository in the web browser.
+                    </th>
+                    <th>Open issues or pull request 15
+                    </th>
+                    <th>Open a commit page
+                    </th>
+                    <th>Open main.py file at line 340.
+                    </th>
+                    <th>Open repository settings
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>$ gh browse
+                    </td>
+                    <td>$ gh browse 15
+                    </td>
+                    <td>$ gh browse 8d7656a58112aa1487d5f9c12a1c2479ab16483a</td>
+                    <td>$ gh browse main.py:340</td>
+                    <td>$ gh browse --settings</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Codespace">CODESPACE</h2></div>
+    <div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>Create a code space instance for the current
+                        repository. Make sure you have proper
+                        authentication setup.
+                    </th>
+                    <th>Open and initialize the VSCode on the web browser
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>$ gh codespace create
+                    </td>
+                    <td>$ gh codespace code --web
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Gist">GIST</h2></div>
+    <div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>List of your Gists.
+                    </th>
+                    <th>Publish a 'main.py' file as a gist.
+                    </th>
+                    <th>View a gist in terminal using id.
+                    </th>
+                    <th>Delete a gist using id.
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>$ gh gist list
+                    </td>
+                    <td>$ gh gist create --public main.py
+                    </td>
+                    <td>$ gh gist view 8cc08f7cb7d498f426a8f7d2c1dedd56
+                    </td>
+                    <td>$ gh gist view 8cc08f7cb7d498f426a8f7d2c1dedd56
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div><div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Issues">ISSUES</h2></div>
+    <div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>List issues in a GitHub repository.
+                    </th>
+                    <th>Create an issue interactively and follow the steps.
+                    </th>
+                    <th>Show the status of issues that is relevant to you.
+                    </th>
+                    <th>View issues 1 in the terminal.
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>$ gh issue list
+                    </td>
+                    <td>$ gh  issue create
+                    </td>
+                    <td>$ gh issue status
+                    </td>
+                    <td>$ gh issue view 1
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Pr">PR</h2></div>
+<div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Create a pull request interactively.
+                </th>
+                <th>View the list of open pull requests
+                </th>
+                <th>View a pull request 2 in terminal.
+                </th>
+                <th>Review pull request 24 interactively.
+                </th>
+                <th>Merge pull request 24 on GitHub.
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-warning">
+                <td>$ gh pr create
+                </td>
+                <td>$ gh pr list
+                </td>
+                <td>$ gh pr view 2
+                </td>
+                <td>$ gh pr review 24
+                </td>
+                <td>$ gh pr merge 24
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div><div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Repo">REPO</h2></div>
+<div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Create a repository interactively
+                </th>
+                <th>Clone a repository using OWNER/REPO syntax.
+                </th>
+                <th>List repositories owned by kingabzpro
+                </th>
+                <th>Create a fork for docs repository.
+                </th>
+                <th>Viewing a repository description and readme in
+                    terminal                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-warning">
+                <td>$ gh repo create
+                </td>
+                <td>$ gh repo clone kingabzpro/blog
+                </td>
+                <td>$ gh repo list kingabzpro
+                </td>
+                <td>$ gh repo fork github/docs
+                </td>
+                <td>$ gh repo view kingabzpro/blog
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div><div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install"><h2 class="text-center text-white" id="Workflow">WORKFLOW</h2></div>
+<div class="col-8 offset-2 bg-white p-0 rounded border-dark ">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>List workflow files in GitHub Actions
+                </th>
+                <th>Run the workflow file 'build.yml' at the remote
+                    default branch
+                </th>
+                <th>Select a workflow to view interactively
+                </th>
+                <th>Enable/Disable a workflow
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-warning">
+                <td>$ gh workflow list
+                </td>
+                <td>$ gh workflow run build.yml
+                </td>
+                <td>$ gh workflow view
+                </td>
+                <td>$ gh workflow enable/disable build.yml
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install">
+    <h2 class="text-center text-white" id="Run">RUN</h2>
+</div>
+<div class="col-8 offset-2 bg-white p-0 rounded border-dark">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>List recent workflow runs</th>
+                <th>Select a run to view interactively</th>
+                <th>Watch a run until it completes</th>
+                <th>Cancel a workflow run</th>
+                <th>Rerun a failed run</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-warning">
+                <td>$ gh run list</td>
+                <td>$ gh run view</td>
+                <td>$ gh run watch 3456</td>
+                <td>$ gh run cancel 3456</td>
+                <td>$ gh run rerun 3456</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-8 offset-2 bg-primary p-2 rounded border-dark" id="Install">
+    <h2 class="text-center text-white" id="Status">STATUS</h2>
+</div>
+<div class="col-8 offset-2 bg-white p-0 rounded border-dark">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>View summary of your work on GitHub across all the repositories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-warning">
+                <td>$ gh status</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
